@@ -1,63 +1,75 @@
 export default function Servicios() {
   const servicios = [
     { 
-      name: 'Nutriólogo Rafael Méndez (Tel: 4646537861)', 
+      name: 'Nutriólogo - Rafael Méndez (Tel: 4646537861)', 
       days: 'Lunes a Viernes / Sábado', 
       hours: '04:00 PM a 08:00 PM / 11:00 AM a 01:00 PM', 
       cost: '$150.00 Por Consulta'
     },
     { 
-      name: 'Terapia de Lenguaje, Mtra. Tania Arroyo (Tel: 4646559508)', 
+      name: 'Terapia de Lenguaje - Mtra. Tania Arroyo (Tel: 4646559508)', 
       days: 'Lunes a Viernes', 
       hours: '12:00 PM a 06:00 PM', 
       cost: '$200.00 Por Consulta' 
     },
     { 
-      name: 'Terapia de Lenguaje, Neuropsicologa. Becky de la Peña (Tel: 4641652487)', 
+      name: 'Terapia de Lenguaje - Neuropsicologa. Becky de la Peña (Tel: 4641652487)', 
       days: 'Martes a Jueves', 
       hours: '10:00 AM a 5:00 PM', 
       cost: '$250.00 Por Consulta' 
     },
     { 
-      name: 'Asesoría Jurídica - Lic. Rubi Miranda (Tel: 4641346720)', 
+      name: 'Tanatologa - Candy Saavedra (Tel: 4641810180)', 
+      days: 'Viernes y Sabado', 
+      hours: '9:00 AM a 3:00 PM', 
+      cost: '$250.00 Por Consulta' 
+    },
+    { 
+      name: 'Psicologa - Adriana Saavedra (Tel: 4646461489)', 
       days: 'Lunes a Viernes', 
-      hours: '9:00 AM a 1:00 PM', 
-      cost: '$150.00 Por Consulta' 
+      hours: '9:00 AM a 6:00 PM', 
+      cost: '$250.00 Por Consulta' 
     },
     { 
-      name: 'Fisioterapia - Victor Tierrablanca (Tel: 4646549599)', 
+      name: 'Psicologa - Angelica Montenero (Tel: 4641206967)', 
       days: 'Lunes a Viernes', 
-      hours: '9:00 AM a 4:00 PM', 
-      cost: '$150.00 Por Consulta' 
-    },
-    { 
-      name: 'Dentista Diana García (Tel: 4641239868)', 
-      days: 'Lunes a Viernes / Sábado', 
-      hours: '10:00 AM a 7:00 PM / 10:00 AM a 3:00 PM', 
-      cost: '$100.00 Por Consulta' 
-    },
-    { 
-      name: 'Oculista', 
-      days: 'Sábado', 
-      hours: '10:30 AM a 1:00 PM', 
-      cost: 'Examen Gratis (Lentes costo variable)' 
-    },
-    { 
-      name: 'Tanatología - Candy Saavedra (Tel: 4641810180)', 
-      days: 'Sábado', 
-      hours: '8:00 AM a 4:00 PM', 
-      cost: '$150.00 Por Consulta' 
-    },
-    { 
-      name: 'Terapia de Lenguaje - Tania Arroyo (Tel: 4646559508)', 
-      days: 'Lunes a Viernes', 
-      hours: '2:00 PM a 6:00 PM', 
+      hours: '09:00 AM a 01:00 PM', 
       cost: '$200.00 Por Consulta' 
     },
     { 
-      name: 'Terapia de Lenguaje - Becky De La Peña (Tel: 4641652487)', 
-      days: 'Lunes, Miércoles', 
-      hours: '12:00 PM a 5:00 PM', 
+      name: 'Psicologo - Lothar Saldierna (Tel: 4641371253', 
+      days: 'Lunes a Viernes / Sábado', 
+      hours: '09:00 AM a 06:00 PM / 09:00 AM a 11:00 am', 
+      cost: '$250.00 Por Consulta' 
+    },
+    { 
+      name: 'Psicologa - Andrea Gonzales (Tel: 4641043387)', 
+      days: 'Viernes / Sábado', 
+      hours: '02:00 PM a 06:00 PM / 09:00 AM a 03:00 PM', 
+      cost: '$250.00 Por Consulta' 
+    },
+    { 
+      name: 'Dentista - Diana García (Tel: 4431684287)', 
+      days: 'Lunes a Viernes', 
+      hours: '10:00 AM a 7:00 PM', 
+      cost: '$100.00 Por Consulta' 
+    },
+    { 
+      name: 'Terapia Filosofica. Adquiere herramientas y trabaja por tu bienestar', 
+      days: 'Previa Cita - Paola Mares (Tel: 4772525385)', 
+      hours: '', 
+      cost: '$200.00 Por Sesion' 
+    },
+    { 
+      name: 'Asesora Juridica - Lic. Rubi Miranda (Tel: 4641346720)', 
+      days: 'Miercoles y Viernes', 
+      hours: '07:00 AM a 11:00 AM', 
+      cost: '$250.00 Por Consulta' 
+    },
+    { 
+      name: 'Fisioterapeuta - Victor Tierrablanca (Tel: 4646549599)', 
+      days: 'Lunes a Viernes / Sábado', 
+      hours: '04:00 PM a 07:00 PM / 08:00 AM a 02:00 PM', 
       cost: '$150.00 Por Consulta' 
     }
   ];
@@ -90,6 +102,12 @@ export default function Servicios() {
         </div>
         <p style={{ marginTop: '15px', fontStyle: 'italic', fontSize: '0.85em' }}>
           * Todos los servicios requieren previa cita.
+        </p>
+         <p style={{ marginTop: '15px', fontStyle: 'italic', fontSize: '0.85em' }}>
+          MENORES DE EDAD: Comprobante de domicilio e INE de madre, padre o tutor.
+        </p>
+         <p style={{ marginTop: '15px', fontStyle: 'italic', fontSize: '0.85em' }}>
+          MAYORES DE EDAD: INE, CURP y comprobante de domicilio.
         </p>
       </div>
     </section>
