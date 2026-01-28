@@ -15,60 +15,60 @@ export default function Servicios() {
     { 
       name: 'Terapia de Lenguaje - Neuropsicologa. Becky de la Peña (Tel: 4641652487)', 
       days: 'Martes a Jueves', 
-      hours: '10:00 AM a 5:00 PM', 
+      hours: '10:00 AM a 05:00 PM', 
       cost: '$250.00 Por Consulta' 
     },
-    { 
+        { 
       name: 'Tanatologa - Candy Saavedra (Tel: 4641810180)', 
-      days: 'Viernes y Sabado', 
-      hours: '9:00 AM a 3:00 PM', 
+      days: 'Viernes y Sábado', 
+      hours: '09:00 AM a 03:00 PM', 
       cost: '$250.00 Por Consulta' 
     },
     { 
       name: 'Psicologa - Adriana Saavedra (Tel: 4646461489)', 
       days: 'Lunes a Viernes', 
-      hours: '9:00 AM a 6:00 PM', 
+      hours: '09:00 AM a 06:00 PM', 
       cost: '$250.00 Por Consulta' 
     },
     { 
-      name: 'Psicologa - Angelica Montenero (Tel: 4641206967)', 
+      name: 'Psicologa - Angelica Montero (Tel: 4641206967)', 
       days: 'Lunes a Viernes', 
       hours: '09:00 AM a 01:00 PM', 
       cost: '$200.00 Por Consulta' 
     },
     { 
-      name: 'Psicologo - Lothar Saldierna (Tel: 4641371253', 
+      name: 'Psicologo - Lothar Saldierna (Tel: 4641371253)', 
       days: 'Lunes a Viernes / Sábado', 
-      hours: '09:00 AM a 06:00 PM / 09:00 AM a 11:00 am', 
+      hours: '09:00 AM a 06:00 PM / 09:00 AM a 11:00 AM', 
       cost: '$250.00 Por Consulta' 
     },
     { 
       name: 'Psicologa - Andrea Gonzales (Tel: 4641043387)', 
-      days: 'Viernes / Sábado', 
-      hours: '02:00 PM a 06:00 PM / 09:00 AM a 03:00 PM', 
+      days: 'Viernes / Sabado', 
+      hours: '02:00 PM a 06:00 PM / 09:00 AM a 11:00 AM ', 
       cost: '$250.00 Por Consulta' 
     },
     { 
-      name: 'Dentista - Diana García (Tel: 4431684287)', 
+      name: 'Dentista - Diana Garcia (Tel: 4431684287)', 
       days: 'Lunes a Viernes', 
-      hours: '10:00 AM a 7:00 PM', 
-      cost: '$100.00 Por Consulta' 
+      hours: '10:00 AM a 07:00 PM', 
+      cost: '$200.00 Por Consulta' 
     },
     { 
-      name: 'Terapia Filosofica. Adquiere herramientas y trabaja por tu bienestar', 
-      days: 'Previa Cita - Paola Mares (Tel: 4772525385)', 
+      name: 'Terapia Filosofica. Adquiere herramientas y trabaja por tu bienestar - Paola Mares', 
+      days: 'Previa Cita (Tel: 4772525385)', 
       hours: '', 
-      cost: '$200.00 Por Sesion' 
+      cost: '$200.00 Por Consulta' 
     },
     { 
-      name: 'Asesora Juridica - Lic. Rubi Miranda (Tel: 4641346720)', 
+      name: 'Asesoria Juridica - Lic. Rubi Miranda (Tel: 4641346720)', 
       days: 'Miercoles y Viernes', 
       hours: '07:00 AM a 11:00 AM', 
       cost: '$250.00 Por Consulta' 
     },
     { 
-      name: 'Fisioterapeuta - Victor Tierrablanca (Tel: 4646549599)', 
-      days: 'Lunes a Viernes / Sábado', 
+      name: 'Fisioterapeuta Victor Tierrablanca (Tel: 4646549599)', 
+      days: 'Lunes a Viernes / Sabado', 
       hours: '04:00 PM a 07:00 PM / 08:00 AM a 02:00 PM', 
       cost: '$150.00 Por Consulta' 
     }
@@ -77,7 +77,7 @@ export default function Servicios() {
   return (
     <section id="servicios" className="section servicios">
       <div className="container">
-        <h2 style={{ marginBottom: '20px' }}>Servicios (horarios y días)</h2>
+        <h2 style={{ marginBottom: '20px' }}>Servicios (Horarios y Días)</h2>
         <div style={{ overflowX: 'auto' }}>
           <table className="services-table" style={{ width: '100%', borderCollapse: 'collapse' }}>
             <thead>

@@ -53,7 +53,7 @@ export default function Footer(){
         {/* Aquí separamos la dirección y el horario en líneas distintas */}
         <div style={{ fontSize: '0.9em', color: '#666' }}>
           <div>Dirección: Calle del Santuario S/N Col. Rinconada San Javier, Salamanca Guanajuato</div>
-          <div style={{ marginTop: '5px' }}>Horarios: Lunes - Viernes de 7:00 a. m. - 7:00 p. m. Y Sabado: 9:00 a. m. - 7:00 p. m. </div>
+          <div style={{ marginTop: '5px' }}>Horarios: Lunes a Viernes de 7:00 AM - 7:00 PM Y Sabado: 9:00 AM - 7:00 PM </div>
         </div>
       </div>
     </footer>
