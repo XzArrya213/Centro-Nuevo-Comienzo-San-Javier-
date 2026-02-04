@@ -67,7 +67,7 @@ export default function Servicios() {
       cost: '$250.00 Por Consulta' 
     },
     { 
-      name: 'Fisioterapeuta Victor Tierrablanca (Tel: 4646549599)', 
+      name: 'Fisioterapeuta - Victor Tierrablanca (Tel: 4646549599)', 
       days: 'Lunes a Viernes / Sabado', 
       hours: '04:00 PM a 07:00 PM / 08:00 AM a 02:00 PM', 
       cost: '$150.00 Por Consulta' 

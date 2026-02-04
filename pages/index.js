@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Header from '../Header'
 import Hero from '../Hero'
-import Cursos from '../Cursos'
 import Servicios from '../Servicios'
 import Costos from '../Costos'
 import Feature from '../Feature'

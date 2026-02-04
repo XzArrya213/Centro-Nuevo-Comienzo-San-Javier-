@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import Header from '../Header'
-import Cursos from '../Cursos'
+import Capacitacion from '../Capacitacion'
 
 export default function CursosPage(){
   return (
     <>
       <Head>
-        <title>Cursos — Centro Nuevo Comienzo SX</title>
+        <title>Capacitacion — Centro Nuevo Comienzo SX</title>
       </Head>
       <Header />
       <main>
-        <Cursos />
+        <Capacitacion />
       </main>
     </>
   )
