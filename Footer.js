@@ -1,59 +1,47 @@
 import Link from 'next/link'
+import styles from './Footer.module.css'
+import { MessageCircle } from 'lucide-react'
 
 let site = null
 try{
   site = require('./data/site.json')
 }catch(e){
-  site = { name: 'Centro Nuevo Comienzo San Javier', phone: '+52 464 688 1415', email: 'info@centronuevocomienzo.mx', facebook: '#', address: 'Calle del Santuario S/N Col. Rinconada San Javier Salamanca Guanajuato', hours: 'Lunes - Viernes' }
+  site = { nombre: 'Centro Nuevo Comienzo San Javier', telefono: '+52 464 688 1415', correo: 'info@centronuevocomienzo.mx', facebook: '#', direccion: 'Calle del Santuario S/N Col. Rinconada San Javier Salamanca Guanajuato', horarios: 'Lunes - Viernes' }
 }
 
 export default function Footer(){
+  // Formatear número de WhatsApp (remover espacios y +)
+  const whatsappNumber = site.whatsapp?.replace(/\s+/g, '').replace('+', '') || ''
+  
   return (
-    <footer className="site-footer">
-      <div className="container footer-inner">
-        <div className="footer-brand">
-          <div className="footer-logo">{site.name}</div>
-          <div className="footer-desc">Apoyando a la comunidad local con actividades, cursos y talleres.</div>
-        </div>
-
-        <div className="footer-contacts">
-          <div><strong>Teléfono</strong></div>
-          <div><a href={`tel:${site.phone}`}>{site.phone}</a></div>
-          <div style={{marginTop:8}}><strong>Email</strong></div>
-          <div><a href={`mailto:${site.email}`}>{site.email}</a></div>
-        </div>
-
-        <div className="footer-links">
-          <div><strong>Enlaces</strong></div>
-          <nav>
-            <ul>
-              <li><Link href="/">Inicio</Link></li>
-              <li><Link href="/informacion">Información</Link></li>
-              <li><Link href="/cursos">Cursos</Link></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div className="footer-social">
-          <div><strong>Síguenos</strong></div>
-          <div style={{marginTop:8,display:'flex',gap:10}}>
-            {site.facebook && (
-              <a href={site.facebook} target="_blank" rel="noreferrer" className="social-btn">f</a>
-            )}
-          </div>
-        </div>
-      </div>
-
-      {/* Sección Legal Ajustada */}
-      <div className="container footer-legal" style={{ textAlign: 'center', borderTop: '1px solid #eee', paddingTop: '20px' }}>
-        <div style={{ marginBottom: '10px' }}>
-          © {new Date().getFullYear()} {site.name}. Todos los derechos reservados.
-        </div>
+    <footer className={styles.footer}>
+      <div className={styles.footerContent}>
+        <h2 className={styles.footerTitle}>{site.name}</h2>
         
-        {/* Aquí separamos la dirección y el horario en líneas distintas */}
-        <div style={{ fontSize: '0.9em', color: '#666' }}>
-          <div>Dirección: Calle del Santuario S/N Col. Rinconada San Javier, Salamanca Guanajuato</div>
-          <div style={{ marginTop: '5px' }}>Horarios: Lunes a Viernes de 7:00 AM - 7:00 PM Y Sabado: 9:00 AM - 7:00 PM </div>
+        <nav className={styles.footerNav}>
+          <Link href="/">Inicio</Link>
+          <Link href="/formativos">Formativos</Link>
+          <Link href="/cursos">Capacitacion</Link>
+          <Link href="/servicios">Servicios</Link>
+        </nav>
+
+        <div className={styles.footerSocial}>
+          {site.facebook && site.facebook !== '#' && (
+            <a href={site.facebook} target="_blank" rel="noreferrer" className={styles.socialIcon} title="Facebook">f</a>
+          )}
+          <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noreferrer" className={styles.socialIcon} title="WhatsApp"> <MessageCircle size={24} /> </a>
+          <a href={`tel:${site.phone}`} className={styles.socialIcon} title="Llamar">☎</a>
+        </div>
+
+        <div className={styles.footerContact}>
+          {site.address && <div><strong>Dirección:</strong> {site.address}</div>}
+          {site.hours && <div><strong>Horarios:</strong> {site.hours}</div>}
+        </div>
+
+        <div className={styles.footerLegal}>
+          <div className={styles.footerCopyright}>
+            © {new Date().getFullYear()} {site.name}. Todos los derechos reservados.
+          </div>
         </div>
       </div>
     </footer>

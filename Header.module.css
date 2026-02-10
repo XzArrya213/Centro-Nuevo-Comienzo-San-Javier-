@@ -1,0 +1,98 @@
+.header {
+  background: linear-gradient(90deg, #ffffff 0%, #f8f9ff 100%);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 12px 0;
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 40px;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logoContainer:hover {
+  opacity: 0.8;
+}
+
+.logoImage {
+  height: 48px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.nav a:hover {
+  color: #003d82;
+}
+
+.nav a.active {
+  color: #003d82;
+  border-bottom: 2px solid #003d82;
+  padding-bottom: 0px;
+}
+
+@media (max-width: 768px) {
+  .headerInner {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 16px;
+    justify-content: center;
+  }
+
+  .logoContainer {
+    width: auto;
+    justify-content: center;
+    gap: 0;
+    order: 1;
+  }
+
+  .logoImage {
+    height: 42px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    order: 2;
+  }
+
+  .nav a {
+    font-size: 0.85rem;
+  }
+}

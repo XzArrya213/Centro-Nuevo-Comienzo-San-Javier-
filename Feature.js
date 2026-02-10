@@ -16,7 +16,7 @@ export default function Feature(){
           <p style={{color:'#51666a',lineHeight:1.6}}>El Centro Nuevo Comienzo San Xavier es un espacio donde las personas se reúnen, se apoyan, conviven y encuentran oportunidades para crecer, fortaleciendo los lazos familiares y comunitarios en un entorno de respeto e inclusión.</p>
 
           <div style={{display:'flex',gap:16,marginTop:18,alignItems:'center'}}>
-            <img src="https://scontent.fbjx1-1.fna.fbcdn.net/v/t39.30808-6/544984931_627067783809065_1527945197648170038_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fOdXWvYZyIQQ7kNvwHaSxl8&_nc_oc=AdlhB6uW7FemDLJheKXB4ZiAVJtTmUJ6cZALqmfBs4A5c6elZWqjXpbJBUWykeTgmt4NLLb7_rzE8w1Ag4Ms-6c5&_nc_zt=23&_nc_ht=scontent.fbjx1-1.fna&_nc_gid=vz-u3PfF9znG6MsOQjg7Ug&oh=00_AfuMn3J2lHYypbSYl7gd8O3CmVYrVEztvqsJ36kENNOf7g&oe=698964B6" alt="mini" style={{width:350,height:200,objectFit:'cover',borderRadius:6}} />
+            <img src="/imgs/humaaans3.png" alt="mini" style={{width:350,height:200,objectFit:'cover',borderRadius:6}} />
             <ul style={{listStyle:'none',padding:0,margin:0,color:'#51666a'}}>
               <li style={{padding:'8px 0',borderBottom:'1px solid #e6eef0'}}>Un espacio de convivencia y respeto</li>
               <li style={{padding:'8px 0',borderBottom:'1px solid #e6eef0'}}>Impulso al desarrollo personal y social</li>

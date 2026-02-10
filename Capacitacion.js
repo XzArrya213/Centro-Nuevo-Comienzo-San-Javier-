@@ -60,7 +60,7 @@ export default function Capacitacion() {
     {
       title: 'Globoflexia',
       desc: 'Descubre el arte de crear figuras creativas y decoraciones impresionantes utilizando globos para cualquier ocasión.',
-      category: 'Arte',
+      category: 'Oficios',
       image: '/imgs/globoflexia.jpg',
       detalles: {
         horario: 'Viernes de 04:00 PM a 05:00 PM',
@@ -71,7 +71,7 @@ export default function Capacitacion() {
     {
       title: 'Decoracion de Eventos',
       desc: 'Aprende a diseñar, planear y montar ambientaciones espectaculares para fiestas, bodas y celebraciones especiales.',
-      category: 'Arte',
+      category: 'Oficios',
       image: '/imgs/decoracion_eventos.jpg',
       detalles: {
         horario: 'Miércoles de 04:00 PM a 06:00 PM',
@@ -126,7 +126,7 @@ export default function Capacitacion() {
       {
       title: 'Pintura para figuras de yeso y cerámica',
       desc: 'Decoración y personalización de piezas,es necesario que cada asistente se presente con un trapito, un vaso y un pincel plano de 1 cm de ancho.',
-      category: 'Oficios',
+      category: 'Arte',
       image: '/imgs/pinturaceramica.jpg', 
       detalles: {
         horario: 'Lunes y Miercoles de 05:00 PM a 06:00 PM',
@@ -178,16 +178,19 @@ export default function Capacitacion() {
           </div>
         </div>
 
-        <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px' }}>
+        <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px', alignItems: 'start' }}>
           {filtered.map((c, i) => (
-            <article key={i} className={`card ${expanded === i ? 'expanded' : ''}`} 
-              style={{ 
-                border: '1px solid #eee', 
-                borderRadius: '12px', 
-                overflow: 'hidden', // Recorta la imagen en las esquinas redondeadas
-                background: '#fff',
-                padding: 0 // IMPORTANTE: Sin padding para que la imagen toque los bordes
-              }}>
+              <article key={i} className='card' 
+                style={{ 
+                  border: '1px solid #eee', 
+                  borderRadius: '12px', 
+                  overflow: 'hidden', // Recorta la imagen en las esquinas redondeadas
+                  background: '#fff',
+                  padding: 0, // IMPORTANTE: Sin padding para que la imagen toque los bordes
+                  display: 'flex',
+                  flexDirection: 'column',
+                  height: '100%'
+                }}>
               
               {/* Imagen Superior sin márgenes */}
               <div style={{ width: '100%', height: '200px', margin: 0 }}>
@@ -204,7 +207,7 @@ export default function Capacitacion() {
               </div>
 
               {/* Contenedor de texto con padding para legibilidad */}
-              <div style={{ padding: '20px' }}>
+              <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                 <h3 style={{ marginTop: 0 }}>{c.title}</h3>
                 <p style={{ fontSize: '0.9em', color: '#555' }}>{c.desc}</p>
                 
