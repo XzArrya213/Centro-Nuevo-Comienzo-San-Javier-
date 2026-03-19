@@ -10,7 +10,7 @@ export default function Informacion() {
     {/* --- Tarjeta 1: INFORMACION DE LUGAR --- */}    
    <div className="info-card">
             <div className="card-image">
-              <img src="/imgs/edificio1.4.jpeg" alt="Visión" />
+              <img src="/imgs/edificio1.2.1.jpeg" alt="Visión" />
             </div>
             <div className="info-text">
                <h3>Información del lugar</h3>

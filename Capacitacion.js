@@ -10,7 +10,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Sabado de 09:00 AM a 11:00 AM',
         costo: '$100.00 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -21,7 +20,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Miercoles y Viernes de 09:00 AM a 11:00 PM',
         costo: '$50.00 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -32,7 +30,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Martes y Viernes de 04:00 PM a 06:00 PM',
         costo: '$35.00 por clase',
-        contacto: '464 139 4105'
       }
     },
     {
@@ -43,7 +40,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Miércoles y Sábado de 10:00 AM a 12:00 PM',
         costo: '$30.00 por clase',
-        contacto: '464 184 7905'
       }
     },
     {
@@ -54,7 +50,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Miércoles de 04:00 PM a 06:00 PM',
         costo: '$70.00 por clase (Material Incluido)',
-        contacto: '464 109 7403'
       }
     },
     {
@@ -65,7 +60,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Viernes de 04:00 PM a 05:00 PM',
         costo: '$50.00 por clase',
-        contacto: '464 109 7403'
       }
     },
     {
@@ -76,7 +70,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Miércoles de 04:00 PM a 06:00 PM',
         costo: '$50.00 por clase',
-        contacto: '464 109 7403'
       }
     },
     {
@@ -87,7 +80,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Viernes de 06:00 PM a 07:30 PM / Martes y Jueves de 03:30 PM a 05:00 PM',
         costo: '$40 por clase',
-        contacto: '464 111 3823'
       }
     },
     {
@@ -98,7 +90,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Martes y Jueves de 09:00 AM a 10:30 AM',
         costo: '$40.00 por clase',
-        contacto: 'Sede Rinconada San Javier'
       }
     },
     {
@@ -109,7 +100,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Lunes de 02:00 PM a 04:00 Pm y Sabado de 10:00 AM a 12:00 PM',
         costo: '$80.00 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -120,7 +110,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Lunes y Martes de 04:00 pm a 06:00 pm',
         costo: '$50 por clase',
-        contacto: '464 169 5354'
       }
     },
       {
@@ -131,7 +120,6 @@ export default function Capacitacion() {
       detalles: {
         horario: 'Lunes y Miercoles de 05:00 PM a 06:00 PM',
         costo: '$50 por clase',
-        contacto: '464 169 5354'
       }
     },
   ];
@@ -227,7 +215,7 @@ export default function Capacitacion() {
                     <p><strong>Horario:</strong> {c.detalles.horario}</p>
                     <p><strong>Costo:</strong> {c.detalles.costo}</p>
                     {c.detalles.inicio && <p><strong>Inicia:</strong> {c.detalles.inicio}</p>}
-                    <p><strong>Contacto:</strong> {c.detalles.contacto}</p>
+     
                     <div style={{ marginTop: 10 }}>
                       <a href="/contacto" className="small-cta" style={{ background: '#007bff', color: '#fff', padding: '8px 12px', borderRadius: '5px', textDecoration: 'none', display: 'inline-block', textAlign: 'center', width: '100%' }}>Inscribirme</a>
                     </div>

@@ -2,13 +2,13 @@
   padding: 36px 16px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, #BBD2C5 0%, #536976 100%);
+  background: linear-gradient(180deg, #BAE6FD 0%, #E0F2FE 100%);
 }
 
 .card {
   width: 100%;
   max-width: 1100px;
-  background: linear-gradient(180deg, #407070, #2B2D42 120%);
+  background: linear-gradient(180deg, #e9fefd, #E0F2FE 120%); 
   border-radius: 10px;
   box-shadow: 0 12px 40px rgba(10, 6, 20, 0.6);
   overflow: hidden;
@@ -18,7 +18,7 @@
 
 .header {
   background: linear-gradient(90deg, #4A5568 0%, #2D3748 100%);
-  color: #fff;
+  color: #ffffff;
   padding: 20px 24px;
 }
 
@@ -52,7 +52,7 @@
   text-transform: uppercase;
   font-size: 0.78rem;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.92);
+  color: rgba(17, 17, 17, 0.92);
   background: linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.06));
   border-bottom: 1px solid rgba(255,255,255,0.04);
 }
@@ -60,7 +60,7 @@
 .servicesTable tbody td {
   padding: 18px 18px;
   font-size: 0.98rem;
-  color: rgba(255,255,255,0.95);
+  color: rgba(17, 17, 17, 0.95);
   vertical-align: middle;
 }
 
@@ -94,7 +94,7 @@
 .smallNote {
   margin-top: 16px;
   font-size: 0.88rem;
-  color: rgba(255,255,255,0.75);
+  color: rgba(16, 16, 16, 0.75);
 }
 
 @media (max-width: 720px) {

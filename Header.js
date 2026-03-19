@@ -21,7 +21,6 @@ export default function Header(){
           <Link className={cls('/cursos')} href="/cursos" aria-current={active==='/cursos' ? 'page' : undefined}>Capacitacion</Link>
           <Link className={cls('/servicios')} href="/servicios" aria-current={active==='/servicios' ? 'page' : undefined}>Servicios</Link>
           <Link className={cls('/informacion')} href="/informacion" aria-current={active==='/informacion' ? 'page' : undefined}>Conocenos</Link>
-          <Link className={cls('/ubicacion')} href="/ubicacion" aria-current={active==='/ubicacion' ? 'page' : undefined}>Ubicación</Link>
           <Link className={cls('/contacto')} href="/contacto" aria-current={active==='/contacto' ? 'page' : undefined}>Contacto</Link>
         </nav>
       </div>

@@ -16,6 +16,7 @@ export default function Footer(){
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
+        
         <h2 className={styles.footerTitle}>{site.name}</h2>
         
         <nav className={styles.footerNav}>

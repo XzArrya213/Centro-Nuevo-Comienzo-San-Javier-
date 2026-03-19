@@ -10,7 +10,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes a Viernes de 08:00 AM a 09:00 AM',
         costo: '$20.00 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -21,7 +20,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Viernes de 05:00 PM a 06:30 PM y Sabado de 12:00 PM a 01:30 PM',
         costo: '$35.00 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -32,7 +30,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes de 04:00 PM a 06:00 PM y Miercoles de 05:00 PM a 07:00 PM',
         costo: '$60.00 por clase',
-        contacto: '464 139 4105'
       }
     },
     {
@@ -43,7 +40,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Martes y Jueves de 04:00 PM a 05:00 PM y Sábado de 01:00 PM a 02:00 PM',
         costo: '$30.00 por clase',
-        contacto: '464 184 7905'
       }
     },
     {
@@ -54,7 +50,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes a Sabado de 09:00 AM a 10:00 AM y Martes y Jueves de 05:00 PM a 06:00 PM',
         costo: '$30.00 por clase',
-        contacto: '464 109 7403'
       }
     },
     {
@@ -65,7 +60,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Sabado de 09:00 AM a 11:00 AM',
         costo: '$60.00 por clase',
-        contacto: '464 109 7403'
       }
     },
     {
@@ -76,7 +70,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes y Miércoles de 05:00 PM a 06:00 PM',
         costo: '$35.00 por clase',
-        contacto: '464 109 7403'
       }
     },
     {
@@ -87,7 +80,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes, Miercoles y Viernes de 05:00 PM a 06:00 PM',
         costo: '$35.00 por clase',
-        contacto: '464 111 3823'
       }
     },
     {
@@ -98,7 +90,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes, Miercoles y Viernes de 06:00 PM a 07:00 PM',
         costo: '$35.00 por clase',
-        contacto: '464 111 3823'
       }
     },
     {
@@ -109,7 +100,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes a Viernes de 07:00 AM a 08:00 AM, 06:30 PM a 07:30 PM, 07:30 PM a 08:30 PM',
         costo: '$50.00 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -120,7 +110,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes, Miercoles y Viernes de 05:00 pm a 06:00 pm',
         costo: '$70 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -131,7 +120,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes y Miercoles de 04:00 pm a 05:00 pm',
         costo: '$30.00 por clase',
-        contacto: '464 169 5354'
       }
     },
     {
@@ -142,7 +130,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Martes y Jueves de 05:00 PM a 06:30 PM',
         costo: '$15.00 por clase',
-        contacto: '464 169 5354'
       }
     },
      {
@@ -153,7 +140,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Miercoles de 10:00 AM a 11:30 AM',
         costo: '$100.00 por clase (Incluido material)',
-        contacto: '464 169 5354'
       }
     },
      {
@@ -164,7 +150,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Viernes de 10:00 AM a 11:30 AM',
         costo: '$200.00 por sesion',
-        contacto: '464 169 5354'
       }
     },
      {
@@ -175,7 +160,6 @@ export default function Formativos() {
       detalles: {
         horario: 'Lunes de 09:00 AM a 03:00 PM y Martes de 09:00 AM a 04:00 PM',
         costo: 'Gratuito',
-        contacto: '464 169 5354'
       }
     },           
   ];
@@ -271,7 +255,6 @@ export default function Formativos() {
                     <p><strong>Horario:</strong> {c.detalles.horario}</p>
                     <p><strong>Costo:</strong> {c.detalles.costo}</p>
                     {c.detalles.inicio && <p><strong>Inicia:</strong> {c.detalles.inicio}</p>}
-                    <p><strong>Contacto:</strong> {c.detalles.contacto}</p>
                     <div style={{ marginTop: 10 }}>
                       <a href="/contacto" className="small-cta" style={{ background: '#007bff', color: '#fff', padding: '8px 12px', borderRadius: '5px', textDecoration: 'none', display: 'inline-block', textAlign: 'center', width: '100%' }}>Inscribirme</a>
                     </div>

@@ -1,5 +1,5 @@
 .footer {
-  background: linear-gradient(180deg, #111827 0%, #065F46 100%);
+  background: linear-gradient(180deg, #003366 0%, #4682B4 100%);
   color: #ffffff;
   padding: 60px 24px 40px;
   margin-top: 80px;
@@ -53,9 +53,9 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  border: 2px solid #4a7c59;
+  border: 2px solid #B8860B;
   border-radius: 50%;
-  color: #4a7c59;
+  color: #B8860B;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -63,7 +63,7 @@
 }
 
 .socialIcon:hover {
-  background: #4a7c59;
+  background: #B8860B;
   color: #ffffff;
 }
 
@@ -94,7 +94,7 @@
 
 .footerCopyright {
   font-size: 0.9rem;
-  color: #808080;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
