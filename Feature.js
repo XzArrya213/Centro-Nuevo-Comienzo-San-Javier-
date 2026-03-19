@@ -132,7 +132,7 @@ export default function Feature() {
               </div>
               <div style={textContainerStyle}>
                 <h3 style={titleStyle}>Desarrollo personal y social</h3>
-                <p style={descStyle}>Fortalecemos los lazos familiares y comunitarios brindando herramientas para el crecimiento integral de todos los asistentes.</p>
+                <p style={descStyle}>Fortalecemos los lazos familiares y comunitarios brindando y compartiendo herramientas para el crecimiento integral de todos los asistentes.</p>
               </div>
             </div>
 
@@ -153,7 +153,7 @@ export default function Feature() {
             {/* Botón inferior centrado */}
             <div style={{ textAlign: 'center', marginTop: '1rem' }}>
       
-              <a href="/informacion" style={buttonStyle}>Ver toda la información</a>
+              <a className="cta" href="/informacion" aria-label={buttonStyle}>Ver toda la información</a>
             </div>
 
           </div>
