@@ -1,9 +1,11 @@
 .header {
-  background: linear-gradient(90deg, #ffffff 0%, #f8f9ff 100%);
+  background: linear-gradient(90deg, #e2e8f0 0%, #e2e8f0 100%);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  position: sticky;
+  position: fixed; /* El cambio clave para que nunca se mueva */
   top: 0;
-  z-index: 50;
+  left: 0; /* Asegura que empiece desde el borde izquierdo */
+  width: 100%; /* Asegura que cubra toda la pantalla de lado a lado */
+  z-index: 1000; /* Lo subimos para garantizar que siempre esté por encima de todo */
   padding: 12px 0;
 }
 

@@ -206,19 +206,29 @@ export default function Formativos() {
           </div>
         </div>
 
-        <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px', alignItems: 'start' }}>
-          {filtered.map((c, i) => (
-              <article key={i} className='card' 
-                style={{ 
-                  border: '1px solid #eee', 
-                  borderRadius: '12px', 
-                  overflow: 'hidden', // Recorta la imagen en las esquinas redondeadas
-                  background: '#fff',
-                  padding: 0, // IMPORTANTE: Sin padding para que la imagen toque los bordes
-                  display: 'flex',
-                  flexDirection: 'column',
-                  height: '100%'
-                }}>
+        <div className="cards" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between' }}>
+          {filtered.map((c, i) => {
+            const isExpanded = expanded === i;
+            const closedHeight = 420;
+            return (
+            <article key={i} className='card' 
+              style={{ 
+                border: '1px solid #eee', 
+                borderRadius: '12px', 
+                overflow: 'hidden', // Recorta la imagen en las esquinas redondeadas
+                background: '#fff',
+                padding: 0, // IMPORTANTE: Sin padding para que la imagen toque los bordes
+                display: 'flex',
+                flexDirection: 'column',
+                flex: '1 1 300px',
+                maxWidth: 'calc(33.333% - 13.33px)',
+                minWidth: '280px',
+                alignSelf: 'flex-start',
+                minHeight: `${closedHeight}px`,
+                height: isExpanded ? 'auto' : `${closedHeight}px`,
+                transition: 'height 220ms ease-in-out',
+                boxShadow: isExpanded ? '0 20px 60px rgba(0,0,0,0.16)' : '0 10px 20px rgba(0,0,0,0.08)'
+              }}>
               
               {/* Imagen Superior sin márgenes */}
               <div style={{ width: '100%', height: '200px', margin: 0 }}>
@@ -250,19 +260,31 @@ export default function Formativos() {
                   </button>
                 </div>
 
-                {expanded === i && (
-                  <div style={{ marginTop: '15px', padding: '15px', background: '#f9f9f9', borderRadius: '8px', fontSize: '0.85em' }}>
-                    <p><strong>Horario:</strong> {c.detalles.horario}</p>
-                    <p><strong>Costo:</strong> {c.detalles.costo}</p>
-                    {c.detalles.inicio && <p><strong>Inicia:</strong> {c.detalles.inicio}</p>}
-                    <div style={{ marginTop: 10 }}>
-                      <a href="/contacto" className="small-cta" style={{ background: '#007bff', color: '#fff', padding: '8px 12px', borderRadius: '5px', textDecoration: 'none', display: 'inline-block', textAlign: 'center', width: '100%' }}>Inscribirme</a>
-                    </div>
+                <div
+                  style={{
+                    marginTop: '15px',
+                    padding: isExpanded ? '15px' : '0px 15px',
+                    background: '#f9f9f9',
+                    borderRadius: '8px',
+                    fontSize: '0.85em',
+                    maxHeight: isExpanded ? '240px' : '0px',
+                    opacity: isExpanded ? 1 : 0,
+                    overflow: 'hidden',
+                    transition: 'max-height 240ms ease, opacity 180ms ease',
+                  }}
+                  aria-hidden={!isExpanded}
+                >
+                  <p><strong>Horario:</strong> {c.detalles.horario}</p>
+                  <p><strong>Costo:</strong> {c.detalles.costo}</p>
+                  {c.detalles.inicio && <p><strong>Inicia:</strong> {c.detalles.inicio}</p>}
+                  <div style={{ marginTop: 10 }}>
+                    <a href="/contacto" className="small-cta" style={{ background: '#007bff', color: '#fff', padding: '8px 12px', borderRadius: '5px', textDecoration: 'none', display: 'inline-block', textAlign: 'center', width: '100%' }}>Inscribirme</a>
                   </div>
-                )}
+                </div>
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
 
         <p style={{ marginTop: '15px', fontStyle: 'italic', fontSize: '0.85em' }}>

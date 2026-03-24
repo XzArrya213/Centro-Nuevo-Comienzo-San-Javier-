@@ -167,51 +167,70 @@ export default function Capacitacion() {
         </div>
 
         <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '20px', alignItems: 'start' }}>
-          {filtered.map((c, i) => (
-              <article key={i} className='card' 
+          {filtered.map((c, i) => {
+            const isExpanded = expanded === i;
+            const closedHeight = 440;
+            return (
+            <div key={i}> 
+              <article className='card' 
                 style={{ 
                   border: '1px solid #eee', 
                   borderRadius: '12px', 
-                  overflow: 'hidden', // Recorta la imagen en las esquinas redondeadas
+                  overflow: 'hidden', 
                   background: '#fff',
-                  padding: 0, // IMPORTANTE: Sin padding para que la imagen toque los bordes
+                  padding: 0, 
                   display: 'flex',
                   flexDirection: 'column',
-                  height: '100%'
+                  minHeight: `${closedHeight}px`,
+                  height: isExpanded ? 'auto' : `${closedHeight}px`,
+                  transition: 'height 220ms ease-in-out',
+                  alignSelf: 'flex-start'
                 }}>
               
-              {/* Imagen Superior sin márgenes */}
-              <div style={{ width: '100%', height: '200px', margin: 0 }}>
-                <img 
-                  src={c.image} 
-                  alt={c.title} 
-                  style={{ 
-                    width: '100%', 
-                    height: '100%', 
-                    objectFit: 'cover', 
-                    display: 'block' // Elimina el espacio vacío inferior de la imagen
-                  }} 
-                />
-              </div>
-
-              {/* Contenedor de texto con padding para legibilidad */}
-              <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                <h3 style={{ marginTop: 0 }}>{c.title}</h3>
-                <p style={{ fontSize: '0.9em', color: '#555' }}>{c.desc}</p>
-                
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' }}>
-                  <span style={{ fontSize: '0.8em', color: '#888', textTransform: 'uppercase' }}>{c.category}</span>
-                  <button 
-                    className="toggle-btn" 
-                    onClick={() => setExpanded(expanded === i ? null : i)}
-                    style={{ cursor: 'pointer', background: 'none', border: '1px solid #ccc', borderRadius: '5px', padding: '5px 10px' }}
-                  >
-                    {expanded === i ? 'Cerrar' : 'Ver más'}
-                  </button>
+                {/* Imagen Superior sin márgenes */}
+                <div style={{ width: '100%', height: '200px', margin: 0 }}>
+                  <img 
+                    src={c.image} 
+                    alt={c.title} 
+                    style={{ 
+                      width: '100%', 
+                      height: '100%', 
+                      objectFit: 'cover', 
+                      display: 'block'
+                    }} 
+                  />
                 </div>
 
-                {expanded === i && (
-                  <div style={{ marginTop: '15px', padding: '15px', background: '#f9f9f9', borderRadius: '8px', fontSize: '0.85em' }}>
+                {/* Contenedor de texto con padding para legibilidad */}
+                <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                  <h3 style={{ marginTop: 0 }}>{c.title}</h3>
+                  <p style={{ fontSize: '0.9em', color: '#555' }}>{c.desc}</p>
+                  
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '15px' }}>
+                    <span style={{ fontSize: '0.8em', color: '#888', textTransform: 'uppercase' }}>{c.category}</span>
+                    <button 
+                      className="toggle-btn" 
+                      onClick={() => setExpanded(expanded === i ? null : i)}
+                      style={{ cursor: 'pointer', background: 'none', border: '1px solid #ccc', borderRadius: '5px', padding: '5px 10px' }}
+                    >
+                      {expanded === i ? 'Cerrar' : 'Ver más'}
+                    </button>
+                  </div>
+
+                  <div
+                    style={{
+                      marginTop: '15px',
+                      padding: isExpanded ? '15px' : '0px 15px',
+                      background: '#f9f9f9',
+                      borderRadius: '8px',
+                      fontSize: '0.85em',
+                      maxHeight: isExpanded ? '220px' : '0px',
+                      opacity: isExpanded ? 1 : 0,
+                      overflow: 'hidden',
+                      transition: 'max-height 220ms ease, opacity 160ms ease',
+                    }}
+                    aria-hidden={!isExpanded}
+                  >
                     <p><strong>Horario:</strong> {c.detalles.horario}</p>
                     <p><strong>Costo:</strong> {c.detalles.costo}</p>
                     {c.detalles.inicio && <p><strong>Inicia:</strong> {c.detalles.inicio}</p>}
@@ -220,10 +239,11 @@ export default function Capacitacion() {
                       <a href="/contacto" className="small-cta" style={{ background: '#007bff', color: '#fff', padding: '8px 12px', borderRadius: '5px', textDecoration: 'none', display: 'inline-block', textAlign: 'center', width: '100%' }}>Inscribirme</a>
                     </div>
                   </div>
-                )}
-              </div>
-            </article>
-          ))}
+                </div>
+              </article>
+            </div>
+          );
+          })}
         </div>
 
         <p style={{ marginTop: '15px', fontStyle: 'italic', fontSize: '0.85em' }}>
