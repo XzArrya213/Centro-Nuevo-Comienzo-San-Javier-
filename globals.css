@@ -59,9 +59,16 @@ section { scroll-margin-top: 88px; }
 .section h2 { font-size: 26px; margin-bottom: 18px; color: var(--dark); }
 
 /* align-items: flex-start evita que las tarjetas se estiren */
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; align-items: flex-start; }
+.cards { display: grid; grid-template-columns: repeat(3, minmax(300px, 1fr)); gap: 18px; align-items: flex-start; justify-content: center; }
 .card { background: var(--card); padding: 18px; border-radius: 12px; box-shadow: 0 6px 18px rgba(12,34,34,0.06); transition: transform 240ms ease, box-shadow 240ms ease; border: 1px solid rgba(6,22,22,0.03); }
 .card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(6,22,22,0.12); }
+
+@media (max-width: 1100px) {
+  .cards { grid-template-columns: repeat(2, minmax(280px, 1fr)); }
+}
+@media (max-width: 760px) {
+  .cards { grid-template-columns: 1fr; }
+}
 
 /* Móvil: evitar que una tarjeta estirada obligue altura de fila en grid */
 @media (max-width: 900px) {

@@ -170,12 +170,17 @@ export default function Formativos() {
 
   const categories = useMemo(() => ['Todos', ...Array.from(new Set(cursos.map(c => c.category)))], []);
 
+  const normalizedQuery = query.trim().toLowerCase();
+
   const filtered = useMemo(() => {
-    return cursos.filter(c => 
-      (filter === 'Todos' || c.category === filter) && 
-      (c.title.toLowerCase().includes(query.toLowerCase()) || c.desc.toLowerCase().includes(query.toLowerCase()))
-    );
-  }, [filter, query]);
+    return cursos.filter(c => {
+      const matchesCategory = filter === 'Todos' || c.category === filter;
+      const matchesQuery = !normalizedQuery ||
+        c.title.toLowerCase().includes(normalizedQuery) ||
+        c.desc.toLowerCase().includes(normalizedQuery);
+      return matchesCategory && matchesQuery;
+    });
+  }, [filter, normalizedQuery]);
 
   return (
     <section id="formativos" className="section formativos" aria-labelledby="formativos-title">
@@ -187,7 +192,7 @@ export default function Formativos() {
             {categories.map(cat => (
               <button 
                 key={cat} 
-                onClick={() => setFilter(cat)} 
+                onClick={() => { setFilter(cat); setQuery(''); }} 
                 className="toggle-btn" 
                 style={{ marginRight: 8, background: filter === cat ? '#eee' : 'transparent', fontWeight: filter === cat ? 'bold' : 'normal' }}
               >
@@ -206,27 +211,23 @@ export default function Formativos() {
           </div>
         </div>
 
-        <div className="cards" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'space-between' }}>
+        <div className="cards" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(300px, 1fr))', gap: '20px', alignItems: 'start', justifyContent: 'center' }}>
           {filtered.map((c, i) => {
             const isExpanded = expanded === i;
-            const closedHeight = 420;
+            const closedHeight = 430;
             return (
             <article key={i} className='card' 
               style={{ 
                 border: '1px solid #eee', 
                 borderRadius: '12px', 
-                overflow: 'hidden', // Recorta la imagen en las esquinas redondeadas
+                overflow: 'hidden', 
                 background: '#fff',
-                padding: 0, // IMPORTANTE: Sin padding para que la imagen toque los bordes
+                padding: 0, 
                 display: 'flex',
                 flexDirection: 'column',
-                flex: '1 1 300px',
-                maxWidth: 'calc(33.333% - 13.33px)',
-                minWidth: '280px',
-                alignSelf: 'flex-start',
                 minHeight: `${closedHeight}px`,
                 height: isExpanded ? 'auto' : `${closedHeight}px`,
-                transition: 'height 220ms ease-in-out',
+                transition: 'height 220ms ease-in-out, box-shadow 220ms ease-in-out',
                 boxShadow: isExpanded ? '0 20px 60px rgba(0,0,0,0.16)' : '0 10px 20px rgba(0,0,0,0.08)'
               }}>
               
@@ -260,28 +261,32 @@ export default function Formativos() {
                   </button>
                 </div>
 
-                <div
-                  style={{
-                    marginTop: '15px',
-                    padding: isExpanded ? '15px' : '0px 15px',
-                    background: '#f9f9f9',
-                    borderRadius: '8px',
-                    fontSize: '0.85em',
-                    maxHeight: isExpanded ? '240px' : '0px',
-                    opacity: isExpanded ? 1 : 0,
-                    overflow: 'hidden',
-                    transition: 'max-height 240ms ease, opacity 180ms ease',
-                  }}
-                  aria-hidden={!isExpanded}
-                >
-                  <p><strong>Horario:</strong> {c.detalles.horario}</p>
-                  <p><strong>Costo:</strong> {c.detalles.costo}</p>
-                  {c.detalles.inicio && <p><strong>Inicia:</strong> {c.detalles.inicio}</p>}
-                  <div style={{ marginTop: 10 }}>
-                    <a href="/contacto" className="small-cta" style={{ background: '#007bff', color: '#fff', padding: '8px 12px', borderRadius: '5px', textDecoration: 'none', display: 'inline-block', textAlign: 'center', width: '100%' }}>Inscribirme</a>
-                  </div>
-                </div>
               </div>
+
+                {isExpanded ? (
+                  <div
+                    style={{
+                      marginTop: '15px',
+                      padding: '15px',
+                      background: '#f9f9f9',
+                      borderRadius: '8px',
+                      fontSize: '0.85em',
+                      lineHeight: 1.4,
+                      opacity: 1,
+                      transition: 'opacity 180ms ease',
+                    }}
+                    aria-hidden={!isExpanded}
+                  >
+                    <p><strong>Horario:</strong> {c.detalles.horario}</p>
+                    <p><strong>Costo:</strong> {c.detalles.costo}</p>
+                    {c.detalles.inicio && <p><strong>Inicia:</strong> {c.detalles.inicio}</p>}
+                    <div style={{ marginTop: 10 }}>
+                      <a href="/contacto" className="small-cta" style={{ background: '#007bff', color: '#fff', padding: '8px 12px', borderRadius: '5px', textDecoration: 'none', display: 'inline-block', textAlign: 'center', width: '100%' }}>Inscribirme</a>
+                    </div>
+                  </div>
+                ) : (
+                  <div style={{ height: '0', overflow: 'hidden', padding: '0 15px' }}></div>
+                )}
             </article>
             );
           })}
