@@ -89,16 +89,21 @@ export default function Feature() {
 
   return (
     <section id="feature" className="section feature">
+       <p className="eyebrow" style={{ textAlign: 'center', color: '#2b7a7f', fontWeight: 700, letterSpacing: 1, marginBottom: 6, fontSize: '1.4rem'  // <-- más grande
+ }}
+> 
+  Nuestras Iniciativas
+</p>
       <div className="container" style={{ display: 'flex', gap: '50px', alignItems: 'center', flexWrap: 'wrap', padding: '40px 0' }}>
         
-        {/* COLUMNA IZQUIERDA: Imagen principal (Conservada) */}
+        {/* COLUMNA IZQUIERDA: Imagen principal con silueta/animación */}
         <div style={{ flex: '1 1 400px', minWidth: 280 }}>
-       
-          <img
-            src="/imgs/personaldelcnc.jpg"
-            alt="Centro Nuevo Comienzo"
-            style={{ width: '100%', height: 'auto', objectFit: 'cover', borderRadius: 8 }}
-          />
+          
+   <div className="info-card">
+            <div className="card-image">
+              <img src="/imgs/personaldelcnc.jpg" alt="Visión" />
+            </div>
+          </div>
         </div>
 
         {/* COLUMNA DERECHA: Lista alternada */}
@@ -113,7 +118,9 @@ export default function Feature() {
                   <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                 </svg>
               </div>
+              
               <div style={textContainerStyle}>
+                
                 <h3 style={titleStyle}>Convivencia y respeto</h3>
                 <p style={descStyle}>Un espacio donde las personas se reúnen, se apoyan y conviven, encontrando nuevas oportunidades en un entorno de total inclusión.</p>
               </div>

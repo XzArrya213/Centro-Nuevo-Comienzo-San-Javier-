@@ -80,7 +80,11 @@ export default function LatestBlog(){
   return (
     <section ref={sectionRef} className="section blog-section">
       <div className="container">
-        <p className="eyebrow" style={{textAlign:'center',color:'#2b7a7f',fontWeight:700,letterSpacing:1,marginBottom:6}}>Espacios que transforman</p>
+        <p className="eyebrow" style={{ textAlign: 'center', color: '#2b7a7f', fontWeight: 700, letterSpacing: 1, marginBottom: 6, fontSize: '1.4rem'  // <-- más grande
+ }}
+> 
+  Espacios que transforman
+</p>
         <h2 style={{textAlign:'center',fontFamily: 'Patrick Hand, cursive'}}>Donde comienzan nuevas oportunidades</h2>
 
         <div style={layoutStyle}>
